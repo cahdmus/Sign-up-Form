@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Form - The Odin Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div id="title">
+            <img src="images/odin-lined.png">
+            <h1>Odin</h1>
+        </div>
+        <div id="credit">
+            <p>Photo by <a href="https://unsplash.com/fr/@haliewestphoto">Halie West</a> on <a
+                    href="https://unsplash.com/">Unsplash</a></p>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <h1>This is not a real online service! You know you need something like this in your life to help you
+                realize your deepest dreams. Sign up <em>now</em> to get started.</h1>
+            <h1>You <em>know</em> you want to.</h1>
+        </div>
+
+        <form action="https://httpbin.org/post" method="post">
+            <section>
+                <h1>Let's do this!</h1>
+
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="first_name" placeholder="Thor">
+
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="last_name" placeholder="Odinson">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+
+                <label for="tel">Phone Number</label>
+                <input type="tel" id="tel" name="tel">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password">
+            </section>
+
+            <button type="submit">Create Account</button>
+        </form>
+
+        <p>Already have an account? <a href="https://www.youtube.com/watch?v=V_OVxxIvqVw">Log in</a></p>
+    </main>
+</body>
+
+</html>

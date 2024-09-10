@@ -1,0 +1,50 @@
+:root {
+    --white: hsl(210, 20%, 98%);
+    --secondary-background-color: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 12%);
+    --accent-color: hsl(92, 20%, 35%);
+    --error-color: hsl(0, 54%, 49%);
+    --focus-color: hsl(224, 71%, 55%);
+    --border-color: hsl(228, 12%, 92%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+}
+
+header {
+    width: 45%;
+    background-image: url(images/halie-west-25xggax4bSA-unsplash.jpg);
+    background-position: center;
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#title {
+    background-color: var(--black);
+    margin-top: 40%;
+    padding: 1rem;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title img {
+    height: 10rem;
+}
+
+#credit {
+    padding: .5rem;
+    color: var(--white);
+    text-align: center;
+}
