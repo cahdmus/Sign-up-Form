@@ -1,11 +1,21 @@
+@font-face {
+    font-family: norse-bold;
+    src: url(/fonts/norse-bold-webfont.woff2);
+}
+
 :root {
     --white: hsl(210, 20%, 98%);
     --secondary-background-color: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 12%);
     --accent-color: hsl(92, 20%, 35%);
+    --accent-color-hover: hsl(92, 14%, 46%);
     --error-color: hsl(0, 54%, 49%);
     --focus-color: hsl(224, 71%, 55%);
     --border-color: hsl(228, 12%, 92%);
+}
+
+html {
+    font-size: 62.5%;
 }
 
 * {
@@ -14,9 +24,14 @@
     box-sizing: border-box;
 }
 
+
 body {
     height: 100vh;
     display: flex;
+    background-color: var(--white);
+    color: var(--black);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden;
 }
 
 header {
@@ -30,9 +45,11 @@ header {
 }
 
 #title {
-    background-color: var(--black);
-    margin-top: 40%;
-    padding: 1rem;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    margin-top: 35%;
+    font-family: norse-bold;
+    font-size: 5.3rem;
+    padding: 1.5rem;
     color: var(--white);
     display: flex;
     justify-content: center;
@@ -40,11 +57,111 @@ header {
 }
 
 #title img {
-    height: 10rem;
+    width: 11rem;
 }
 
 #credit {
-    padding: .5rem;
+    font-size: 1.5rem;
+    padding: 1rem;
     color: var(--white);
     text-align: center;
+}
+
+#credit a {
+    color: var(--white);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main #intro {
+    padding: 5rem;
+    font-size: 1.2rem;
+}
+
+main #intro h1 {
+    margin-bottom: 2rem;
+}
+
+#main-form {
+    background-color: white;
+    padding: 2.5rem 5rem;
+    -webkit-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.26);
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.26);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main-form h1 {
+    font-size: 2rem;
+    width: 100%;
+}
+
+.col {
+    margin-right: 5rem;
+}
+
+form button {
+    border: none;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 1.2rem 4.4rem;
+    margin: 3rem 5rem;
+    -webkit-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.26);
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.26);
+}
+
+form button:hover {
+    background-color: var(--accent-color-hover);
+}
+
+form label {
+    margin: 2rem 0 .2rem 0;
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    display: block;
+}
+
+form input {
+    width: 25rem;
+    padding: .8rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+form input:invalid {
+    outline: none;
+    border-color: var(--error-color);
+}
+
+form input:focus {
+    outline: none;
+    border-color: var(--focus-color);
+    -webkit-box-shadow: 3px 3px 1px 0px rgba(0,0,0,0.08);
+    -moz-box-shadow: 3px 3px 1px 0px rgba(0,0,0,0.08);
+    box-shadow: 3px 3px 1px 0px rgba(0,0,0,0.08);
+}
+
+main p {
+    margin-left: 5rem;
+    font-size: 1.5rem;
+}
+
+main a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+main a:hover {
+    color: var(--accent-color-hover);
 }
